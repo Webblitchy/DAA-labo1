@@ -9,7 +9,6 @@ class FetchNameContract : ActivityResultContract<Void?, String?>() {
     override fun createIntent(context: Context, input: Void?): Intent =
         Intent(context, FetchNameActivity::class.java)
 
-
     override fun parseResult(resultCode: Int, intent: Intent?): String? {
         // Check for status of returned contract
         if (resultCode != Activity.RESULT_OK) return null
@@ -17,5 +16,4 @@ class FetchNameContract : ActivityResultContract<Void?, String?>() {
         // If OK, return value stored at the agreed upon key
         return intent?.getStringExtra(FetchNameActivity.ASK_FOR_NAME_RESULT_KEY)
     }
-
 }
