@@ -11,4 +11,8 @@ class FetchNameActivity : AppCompatActivity() {
 
         setContentView(R.layout.activity_save)
     }
+
+    companion object {
+        val ASK_FOR_NAME_RESULT_KEY = "NAME_KEY"
+    }
 }
