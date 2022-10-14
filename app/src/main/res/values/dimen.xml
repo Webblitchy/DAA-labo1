@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="edittext_width">150dp</dimen>
+    <dimen name="edittext_width">200dp</dimen>
+    <dimen name="pad">25dp</dimen>
+    <dimen name="zero">0dip</dimen>
 </resources>

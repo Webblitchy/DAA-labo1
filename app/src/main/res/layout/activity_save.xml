@@ -14,7 +14,9 @@
 
         <EditText
             android:layout_width="@dimen/edittext_width"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/zero"
+            android:layout_marginEnd="@dimen/pad" />
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

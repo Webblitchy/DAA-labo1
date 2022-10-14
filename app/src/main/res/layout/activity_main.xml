@@ -15,7 +15,9 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/welcome_noname" />
+            android:text="@string/welcome_noname"
+            android:layout_marginStart="@dimen/zero"
+            android:layout_marginEnd="@dimen/pad" />
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
