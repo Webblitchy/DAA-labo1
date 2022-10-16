@@ -4,8 +4,18 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.TextView
 
 class MainActivity : AppCompatActivity() {
+    private val getName = registerForActivityResult(FetchNameContract()) {
+        val textField = findViewById<TextView>(R.id.welcome_text)
+
+        textField.text = (
+            if (it.isNullOrBlank()) "Bievenue, veuillez entrer votre nom"
+            else "Bienvenue ${it} !"
+        )
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -13,8 +23,7 @@ class MainActivity : AppCompatActivity() {
         val buttonEdit = findViewById<Button>(R.id.button_edit)
 
         buttonEdit.setOnClickListener {
-            val i = Intent(this, FetchNameActivity::class.java)
-            startActivity(i)
+            getName.launch(null)
         }
     }
 }

@@ -19,9 +19,12 @@ class FetchNameActivity : AppCompatActivity() {
 
         buttonSave.setOnClickListener {
             val surname = surnameInput.text.toString();
-            // TODO: passer le surname en argument
-            val i = Intent(this, MainActivity::class.java)
-            startActivity(i)
+
+            val data = Intent()
+            data.putExtra(ASK_FOR_NAME_RESULT_KEY, surname)
+            setResult(RESULT_OK, data)
+
+            finish()
         }
     }
 
