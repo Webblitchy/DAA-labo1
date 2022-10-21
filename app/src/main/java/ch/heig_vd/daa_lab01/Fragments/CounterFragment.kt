@@ -8,7 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
-import ch.heigvd.iict.and.labo2.R
+import ch.heig_vd.daa_lab01.R
 
 private const val ARG_COUNTER = "param_counter"
 

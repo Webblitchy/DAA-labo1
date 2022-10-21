@@ -7,7 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.SeekBar
-import ch.heigvd.iict.and.labo2.R
+import ch.heig_vd.daa_lab01.R
 
 private const val ARG_HEX_COLOR = "param_color"
 private const val DEFAULT_COLOR = "#CDCDCD"
