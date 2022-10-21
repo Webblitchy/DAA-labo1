@@ -3,4 +3,24 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="2"
+        android:orientation="vertical">
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/counterFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:name="ch.heig_vd.daa_lab01.fragments.CounterFragment"
+            android:layout_weight="1"/>
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/colorFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:name="ch.heig_vd.daa_lab01.fragments.CounterFragment"
+            android:layout_weight="1"
+            />
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
