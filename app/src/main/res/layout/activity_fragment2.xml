@@ -11,7 +11,7 @@
             android:id="@+id/fragmentContainer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:name="ch.heig_vd.daa_lab01.fragments.CounterFragment"
+            android:name="ch.heig_vd.daa_lab01.fragments.StepFragment"
             android:layout_weight="1"/>
         <RelativeLayout
             android:layout_width="match_parent"
