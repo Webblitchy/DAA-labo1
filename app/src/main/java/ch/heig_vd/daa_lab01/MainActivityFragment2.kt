@@ -17,12 +17,15 @@ class MainActivityFragment2 : AppCompatActivity() {
         }
 
         findViewById<Button>(R.id.button_close).setOnClickListener {
-
+            
         }
 
         findViewById<Button>(R.id.button_next).setOnClickListener {
             supportFragmentManager.beginTransaction()
-                .replace(R.id.fragmentContainer, StepFragment())
+                .replace(
+                    R.id.fragmentContainer,
+                    StepFragment.newInstance(supportFragmentManager.backStackEntryCount)
+                )
                 .addToBackStack(null)
                 .commit()
 
