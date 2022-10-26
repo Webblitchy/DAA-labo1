@@ -1,19 +1,21 @@
 package ch.heig_vd.daa_lab01
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
 
 class MainActivity : AppCompatActivity() {
-    private val getName = registerForActivityResult(FetchNameContract()) {
-        val textField = findViewById<TextView>(R.id.welcome_text)
+    var name = ""
 
-        textField.text = (
+    private val getName = registerForActivityResult(FetchNameContract()) {
+        name = (
             if (it.isNullOrBlank()) "Bievenue, veuillez entrer votre nom"
             else "Bienvenue ${it} !"
         )
+
+        val textField = findViewById<TextView>(R.id.welcome_text)
+        textField.text = name
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -25,5 +27,20 @@ class MainActivity : AppCompatActivity() {
         buttonEdit.setOnClickListener {
             getName.launch(null)
         }
+    }
+
+    override fun onRestoreInstanceState(savedInstanceState: Bundle) {
+        super.onRestoreInstanceState(savedInstanceState)
+        val n = savedInstanceState.getString("name")
+        if (!n.isNullOrBlank())
+            name = n
+
+        val textField = findViewById<TextView>(R.id.welcome_text)
+        textField.text = name.ifBlank { "Bienvenue, veuillez entrer votre nom" }
+    }
+
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+        outState.putString("name", name)
     }
 }
