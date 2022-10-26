@@ -10,7 +10,7 @@ class MainActivity : AppCompatActivity() {
 
     private val getName = registerForActivityResult(FetchNameContract()) {
         name = (
-            if (it.isNullOrBlank()) "Bievenue, veuillez entrer votre nom"
+            if (it.isNullOrBlank()) "Bienvenue, veuillez entrer votre nom"
             else "Bienvenue ${it} !"
         )
 
