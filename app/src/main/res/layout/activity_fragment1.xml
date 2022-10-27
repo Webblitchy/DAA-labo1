@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -13,14 +14,14 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:name="ch.heig_vd.daa_lab01.fragments.CounterFragment"
-            android:layout_weight="1"/>
-
+            android:layout_weight="1"
+            tools:layout="@layout/fragment_counter" />
         <androidx.fragment.app.FragmentContainerView
             android:id="@+id/colorFragment"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:name="ch.heig_vd.daa_lab01.fragments.ColorFragment"
             android:layout_weight="1"
-            />
+            tools:layout="@layout/fragment_color" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
