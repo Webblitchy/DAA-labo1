@@ -22,7 +22,7 @@ class MainActivityFragment2 : AppCompatActivity() {
         }
 
         findViewById<Button>(R.id.button_close).setOnClickListener {
-            
+            finish()
         }
 
         findViewById<Button>(R.id.button_next).setOnClickListener {
