@@ -13,7 +13,12 @@ class MainActivityFragment2 : AppCompatActivity() {
 
         findViewById<Button>(R.id.button_back).setOnClickListener {
             // On revient au Fragment précédent
-            supportFragmentManager.popBackStack()
+            if (supportFragmentManager.fragments.size > 0)  {
+                supportFragmentManager.popBackStack()
+            } else {
+                // On termine l'activité
+                findViewById<Button>(R.id.button_close).callOnClick()
+            }
         }
 
         findViewById<Button>(R.id.button_close).setOnClickListener {
