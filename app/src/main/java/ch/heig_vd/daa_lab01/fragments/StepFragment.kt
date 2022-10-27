@@ -28,7 +28,7 @@ class StepFragment : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        view.findViewById<TextView>(R.id.step_number).text = "$stackCounter"
+        view.findViewById<TextView>(R.id.step_number).text = "Step\n$stackCounter"
     }
 
     companion object {
