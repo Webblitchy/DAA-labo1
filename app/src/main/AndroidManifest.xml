@@ -19,6 +19,7 @@
         </activity>
 
         <!-- 1. Les Activités -->
+        <!--
         <activity
             android:name=".MainActivity"
             android:exported="true">
@@ -28,6 +29,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        -->
         <!-- 2. Les Fragments, premiers pas -->
         <!--
         <activity
@@ -41,7 +43,6 @@
         </activity>
         -->
         <!-- 3. Le FragmentManager -->
-        <!--
         <activity
             android:name=".MainActivityFragment2"
             android:exported="true">
@@ -51,7 +52,5 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        -->
     </application>
-
 </manifest>
