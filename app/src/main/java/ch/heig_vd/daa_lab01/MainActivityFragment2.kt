@@ -11,7 +11,7 @@ class MainActivityFragment2 : AppCompatActivity() {
         setContentView(R.layout.activity_fragment2)
 
         findViewById<Button>(R.id.button_back).setOnClickListener {
-            if (supportFragmentManager.backStackEntryCount > 0)  {
+            if (supportFragmentManager.backStackEntryCount > 0) {
                 // On revient au Fragment précédent
                 supportFragmentManager.popBackStack()
             } else {

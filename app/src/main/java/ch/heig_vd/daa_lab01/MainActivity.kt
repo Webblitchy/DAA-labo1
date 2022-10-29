@@ -10,9 +10,9 @@ class MainActivity : AppCompatActivity() {
 
     private val getName = registerForActivityResult(FetchNameContract()) {
         name = (
-            if (it.isNullOrBlank()) "Bienvenue, veuillez entrer votre nom"
-            else "Bienvenue ${it} !"
-        )
+                if (it.isNullOrBlank()) "Bienvenue, veuillez entrer votre nom"
+                else "Bienvenue ${it} !"
+                )
 
         val textField = findViewById<TextView>(R.id.welcome_text)
         textField.text = name
