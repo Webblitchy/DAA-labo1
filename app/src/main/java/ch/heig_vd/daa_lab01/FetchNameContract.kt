@@ -1,4 +1,5 @@
 package ch.heig_vd.daa_lab01
+// Auteurs : Maxim Golay, Eliott Chytil & Lucien Perregaux
 
 import android.app.Activity
 import android.content.Context
